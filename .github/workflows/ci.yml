@@ -1,0 +1,40 @@
+name: build
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    env:
+      AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+      AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+
+    services:
+      db:
+        image: postgres:12
+        ports: ["5432:5432"]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 1
+
+      - name: Setup database
+        run: |
+          bundle exec rails db:create db:schema:load
+        env:
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+          RAILS_ENV: test
+
+      - name: Run style check
+        run: bundle exec rails style:rubocop:run
+
+      - name: Run tests
+        run: bundle exec rspec

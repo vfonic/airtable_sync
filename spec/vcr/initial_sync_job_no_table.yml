@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.airtable.com/v0/<AIRTABLE_BASE_ID>/articles
+    body:
+      encoding: UTF-8
+      string: '{"fields":{"Title":"MyString","Description":"MyText","Published at":"2021-01-29T10:03:54.000Z"}}'
+    headers:
+      Authorization:
+      - Bearer <AIRTABLE_API_KEY>
+      User-Agent:
+      - Airrecord/1.0.11
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 28 Feb 2023 14:10:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '111'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AWSALB=leAhY1cZ+ynXMt8DGsh5eDhXfTE9yV6o/9MF5L9HdPUNkYeQoCRPW1c4UFod+m3NkNx7LQ3I//9DmaFC5txC432Y0Ag7jpZRwVh4EsNsxkGB7N4wLi4OIfdDZS7J;
+        Expires=Tue, 07 Mar 2023 14:10:55 GMT; Path=/
+      - AWSALBCORS=leAhY1cZ+ynXMt8DGsh5eDhXfTE9yV6o/9MF5L9HdPUNkYeQoCRPW1c4UFod+m3NkNx7LQ3I//9DmaFC5txC432Y0Ag7jpZRwVh4EsNsxkGB7N4wLi4OIfdDZS7J;
+        Expires=Tue, 07 Mar 2023 14:10:55 GMT; Path=/; SameSite=None; Secure
+      - brw=brwD6zhlWiprlbQ8N; path=/; expires=Wed, 28 Feb 2024 14:10:55 GMT; domain=.airtable.com;
+        samesite=none; secure
+      Server:
+      - Tengine
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE,GET,OPTIONS,PATCH,POST,PUT
+      Access-Control-Allow-Headers:
+      - authorization,content-length,content-type,user-agent,x-airtable-application-id,x-airtable-user-agent,x-api-version,x-requested-with
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"6f-qGUKHhn78uHGfrl62J8WC6Yguv4"
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"error":{"type":"TABLE_NOT_FOUND","message":"Could not find table
+        articles in application <AIRTABLE_BASE_ID>"}}'
+  recorded_at: Tue, 28 Feb 2023 14:10:54 GMT
+recorded_with: VCR 6.1.0

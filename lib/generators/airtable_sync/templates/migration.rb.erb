@@ -1,0 +1,6 @@
+class AddAirtableIdTo<%= table_name.camelize %> < ActiveRecord::Migration<%= migration_version %>
+  def change
+    add_column :<%= table_name %>, :airtable_id, :string
+    add_index :<%= table_name %>, :airtable_id, unique: true
+  end
+end

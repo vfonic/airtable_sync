@@ -1,0 +1,191 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.airtable.com/v0/<AIRTABLE_BASE_ID>/Articles/recRMRQT6FvAgSbQW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <AIRTABLE_API_KEY>
+      User-Agent:
+      - Airrecord/1.0.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Feb 2023 14:19:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '156'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AWSALB=ixKeiM3FLoamPcBA5m0IZykQBCnqVMh2KJVax/xmEQ+jkWSS4AtIJckL/3KLdqZfWPcg5XaHVA3Zjn8Z1lqTr9O1iyt90h945fY8l14R5Tt2/mUVoBlvPcXbdLXt;
+        Expires=Tue, 07 Mar 2023 14:19:32 GMT; Path=/
+      - AWSALBCORS=ixKeiM3FLoamPcBA5m0IZykQBCnqVMh2KJVax/xmEQ+jkWSS4AtIJckL/3KLdqZfWPcg5XaHVA3Zjn8Z1lqTr9O1iyt90h945fY8l14R5Tt2/mUVoBlvPcXbdLXt;
+        Expires=Tue, 07 Mar 2023 14:19:32 GMT; Path=/; SameSite=None; Secure
+      - brw=brwJPqQVZtEsX0Msb; path=/; expires=Wed, 28 Feb 2024 14:19:32 GMT; domain=.airtable.com;
+        samesite=none; secure
+      Server:
+      - Tengine
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE,GET,OPTIONS,PATCH,POST,PUT
+      Access-Control-Allow-Headers:
+      - authorization,content-length,content-type,user-agent,x-airtable-application-id,x-airtable-user-agent,x-api-version,x-requested-with
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      Airtable-Uncompressed-Content-Length:
+      - '162'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"recRMRQT6FvAgSbQW","createdTime":"2023-02-28T14:10:31.000Z","fields":{"Title":"MyString","Description":"MyText","Published
+        at":"2021-01-29T10:03:54.000Z"}}'
+  recorded_at: Tue, 28 Feb 2023 14:19:32 GMT
+- request:
+    method: patch
+    uri: https://api.airtable.com/v0/<AIRTABLE_BASE_ID>/Articles/recRMRQT6FvAgSbQW
+    body:
+      encoding: UTF-8
+      string: '{"fields":{"Title":"Updated article title","Published at":"2021-01-29T10:03:54.000Z"}}'
+    headers:
+      Authorization:
+      - Bearer <AIRTABLE_API_KEY>
+      User-Agent:
+      - Airrecord/1.0.11
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Feb 2023 14:21:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '163'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AWSALB=XBR6I8XFcAGuMuaG/rZ2UreTuGrgvwdWbJojzkBQt2zxiIGQ/KeeUBGcEt3zAPBnji4fLs8QADPmBQyEI4IfrEKrsT2AIeWwLOzxQLlHroVdLEPpKnpj4qk9Js8T;
+        Expires=Tue, 07 Mar 2023 14:21:58 GMT; Path=/
+      - AWSALBCORS=XBR6I8XFcAGuMuaG/rZ2UreTuGrgvwdWbJojzkBQt2zxiIGQ/KeeUBGcEt3zAPBnji4fLs8QADPmBQyEI4IfrEKrsT2AIeWwLOzxQLlHroVdLEPpKnpj4qk9Js8T;
+        Expires=Tue, 07 Mar 2023 14:21:58 GMT; Path=/; SameSite=None; Secure
+      - brw=brwPhqKL6fXRb3U6H; path=/; expires=Wed, 28 Feb 2024 14:21:58 GMT; domain=.airtable.com;
+        samesite=none; secure
+      Server:
+      - Tengine
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE,GET,OPTIONS,PATCH,POST,PUT
+      Access-Control-Allow-Headers:
+      - authorization,content-length,content-type,user-agent,x-airtable-application-id,x-airtable-user-agent,x-api-version,x-requested-with
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      Airtable-Uncompressed-Content-Length:
+      - '175'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"recRMRQT6FvAgSbQW","createdTime":"2023-02-28T14:10:31.000Z","fields":{"Title":"Updated
+        article title","Description":"MyText","Published at":"2021-01-29T10:03:54.000Z"}}'
+  recorded_at: Tue, 28 Feb 2023 14:21:57 GMT
+- request:
+    method: get
+    uri: https://api.airtable.com/v0/<AIRTABLE_BASE_ID>/articles/recRMRQT6FvAgSbQW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <AIRTABLE_API_KEY>
+      User-Agent:
+      - Airrecord/1.0.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Feb 2023 14:25:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '163'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AWSALB=6koWHnkGnApVWsZLVXCt4/1Tc5L0/PaT6LhiSqucSAk+/n9xFwB3NR0LjK14KR26+Ee8thRu4Qwm0icxgM8eiiFRo2VPjVFFKlcolMdRZ0Lbs+/owPS1O2u8QFrd;
+        Expires=Tue, 07 Mar 2023 14:25:08 GMT; Path=/
+      - AWSALBCORS=6koWHnkGnApVWsZLVXCt4/1Tc5L0/PaT6LhiSqucSAk+/n9xFwB3NR0LjK14KR26+Ee8thRu4Qwm0icxgM8eiiFRo2VPjVFFKlcolMdRZ0Lbs+/owPS1O2u8QFrd;
+        Expires=Tue, 07 Mar 2023 14:25:08 GMT; Path=/; SameSite=None; Secure
+      - brw=brwDMNJmcOipHjdUS; path=/; expires=Wed, 28 Feb 2024 14:25:08 GMT; domain=.airtable.com;
+        samesite=none; secure
+      Server:
+      - Tengine
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE,GET,OPTIONS,PATCH,POST,PUT
+      Access-Control-Allow-Headers:
+      - authorization,content-length,content-type,user-agent,x-airtable-application-id,x-airtable-user-agent,x-api-version,x-requested-with
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      Airtable-Uncompressed-Content-Length:
+      - '175'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"recRMRQT6FvAgSbQW","createdTime":"2023-02-28T14:10:31.000Z","fields":{"Title":"Updated
+        article title","Description":"MyText","Published at":"2021-01-29T10:03:54.000Z"}}'
+  recorded_at: Tue, 28 Feb 2023 14:25:07 GMT
+recorded_with: VCR 6.1.0
