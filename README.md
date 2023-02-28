@@ -13,8 +13,11 @@ For the latest changes, see the [CHANGELOG.md](CHANGELOG.md).
 Add this line to your application's Gemfile:
 
 ```ruby
+gem 'airrecord', github: 'vfonic/airrecord'
 gem 'airtable_sync'
 ```
+
+We need to use airrecord fork because the original gem is unfortunately poorly maintained by AirTable and community and I don't have the resources to maintain it myself.
 
 And then execute:
 

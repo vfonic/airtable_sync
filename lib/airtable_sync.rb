@@ -7,9 +7,3 @@ require 'airrecord'
 
 module AirtableSync
 end
-
-module Airrecord
-  class Client
-    def escape(*args) = ERB::Util.url_encode(*args)
-  end
-end

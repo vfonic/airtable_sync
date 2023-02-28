@@ -10,6 +10,7 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'airrecord', github: 'vfonic/airrecord', require: false
 gem 'stylecheck', github: 'vfonic/stylecheck', require: false
 
 gem 'dotenv-rails'
