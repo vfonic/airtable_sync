@@ -30,17 +30,13 @@ bundle exec rails generate airtable_sync:install
 
 ## Usage
 
-1. Generate AirTable API key
-   https://airtable.com/create/apikey
-2.
-
 ### Configuration options
 
 In `config/initializers/airtable_sync.rb` you can specify configuration options:
 
-1. `api_key`
-2. `webflow_site_id`
-3. `skip_airtable_sync` - skip synchronization for different environments.
+1. `api_key` - In order to use this gem, you need to generate AirTable API key: https://airtable.com/create/apikey
+2. `airtable_base_id` - you can set `airtable_base_id` here or override `def airtable_base_id` in your model. More on this below.
+3. `skip_airtable_sync` - if set to `true`, AirtableSync will not sync records to AirTable. This is useful for development and test environments where you don't want to sync records to AirTable.
 
 Example:
 
@@ -51,6 +47,10 @@ AirtableSync.configure do |config|
 end
 ```
 
+### Create AirTable tables
+
+You need to create the AirTable base(s) and table(s) yourself.
+
 ### Add AirtableSync to models
 
 For each model that you want to sync to AirTable, you need to run the connection generator:
@@ -60,10 +60,6 @@ bundle exec rails generate airtable_sync:connection Article
 ```
 
 Please note that this _does not_ create the AirTable table. You need to already have it or create it manually.
-
-### Create AirTable tables
-
-As mentioned above, you need to create the AirTable tables yourself.
 
 ### Set `airtable_base_id`
 
@@ -76,6 +72,20 @@ In `config/initializers/airtable_sync.rb` you can specify `airtable_base_id`:
 ```ruby
 AirtableSync.configure do |config|
   config.airtable_base_id = ENV.fetch('AIRTABLE_BASE_ID')
+end
+```
+
+#### Set `airtable_base_id` in model
+
+```rb
+# app/models/article.rb
+
+class Article < ApplicationRecord
+  include AirtableSync::RecordSync
+
+  def airtable_base_id
+    site.airtable_base_id
+  end
 end
 ```
 
@@ -122,10 +132,10 @@ For example:
 AirtableSync::CreateRecordJob.perform_now('articles', 1, 'Stories')
 ```
 
-Or, if you want to use the default 'articles' table name:
+Or, if you want to use the default 'Articles' table name:
 
 ```ruby
-AirtableSync::CreateRecordJob.perform_now('articles', 1)
+AirtableSync::CreateRecordJob.perform_now('articles', 1) # table_name defaults to 'Articles'
 ```
 
 ### Run the initial sync
