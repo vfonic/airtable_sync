@@ -1,3 +1,8 @@
+# 1.3.0
+
+- Upgrade Airrecord dependency to '~> 1.0.12'
+- Add AirtableSync::Api.bases which fetches all bases from Airtable
+
 # 1.2.0
 
 - Drop `airrecord` fork requirement
