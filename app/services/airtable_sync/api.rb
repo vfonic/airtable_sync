@@ -4,9 +4,12 @@ module AirtableSync
   class Api
     attr_reader :base_id
 
-    def initialize(base_id)
+    def initialize(base_id = nil)
       @base_id = base_id
     end
+
+    def bases = JSON[Airrecord::Client.new(ENV.fetch('AIRTABLE_PERSONAL_ACCESS_TOKEN')).connection.get('/v0/meta/bases').body]['bases']
+    def self.bases = new.bases
 
     def get_all_items(table_name:) = table(table_name).all
 
