@@ -1,3 +1,7 @@
+# 1.4.1
+
+- Bump actionpack from 7.0.4.3 to 7.0.5.1 (security release)
+
 # 1.4.0
 
 - Make public `AirtableSync::Api` instance method `#table(table_name)`

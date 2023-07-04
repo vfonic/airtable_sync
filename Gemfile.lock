@@ -14,7 +14,7 @@ GIT
 PATH
   remote: .
   specs:
-    airtable_sync (1.4.0)
+    airtable_sync (1.4.1)
       airrecord (~> 1.0.12)
       rails (>= 6.0)
       sprockets-rails
