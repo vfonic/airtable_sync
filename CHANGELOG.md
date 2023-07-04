@@ -1,3 +1,7 @@
+# 1.4.0
+
+- Make public `AirtableSync::Api` instance method `#table(table_name)`
+
 # 1.3.0
 
 - Upgrade Airrecord dependency to '~> 1.0.12'
