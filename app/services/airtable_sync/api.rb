@@ -28,8 +28,6 @@ module AirtableSync
 
     def delete_record(table_name, airtable_id) = table(table_name).find(airtable_id).destroy
 
-    private
-
-      def table(table_name) = Airrecord.table(AirtableSync.configuration.api_key, base_id, table_name)
+    def table(table_name) = Airrecord.table(AirtableSync.configuration.api_key, base_id, table_name)
   end
 end
