@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'airrecord', '~> 1.0.12'
   spec.add_dependency 'rails', '>= 6.0'
-  spec.add_dependency 'sprockets-rails'
 
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
