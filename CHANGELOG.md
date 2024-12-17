@@ -1,3 +1,7 @@
+# 1.4.2
+
+- Remove sprockets-rails as a gem dependency
+
 # 1.4.1
 
 - Bump actionpack from 7.0.4.3 to 7.0.5.1 (security release)
